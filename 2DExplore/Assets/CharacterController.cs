@@ -41,20 +41,26 @@ public class CharacterController : MonoBehaviour {
         // For left, we have to subtract the direction
         else if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
         {
+            Debug.Log("Current char x,y" + transform.position.x + " " + transform.position.y);
             pos -= Vector2.right/4;
             moving = true;
+            Debug.Log("New char x,y" + transform.position.x + " " + transform.position.y);
         }
         else if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
         {
+            Debug.Log("Current char x,y" + transform.position.x + " " + transform.position.y);
             pos += Vector2.up/4;
             moving = true;
+            Debug.Log("New char x,y" + transform.position.x + " " + transform.position.y);
         }
 
         // Same as for the left, subtraction for down
         else if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
         {
+            Debug.Log("Current char x,y" + transform.position.x + " " + transform.position.y);
             pos -= Vector2.up/4;
             moving = true;
+            Debug.Log("New char x,y" + transform.position.x + " " + transform.position.y);
         }
     }
 }
